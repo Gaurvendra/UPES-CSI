@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="icon" type="image/png" href="assets1/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        UPES-CSI
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="assets1/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets1/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="dark-edition">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="azure" data-background-color="black" data-image="assets1/img/sidebar-2.jpg">
+
+            <div class="logo"><a href="https://upescsi.in" class="simple-text logo-normal">
+                    UPES-CSI
+                </a></div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <!-- <li class="nav-item  ">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>-->
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <i class="material-icons">person</i>
+                            <p>Registeration portal</p>
+                        </a>
+                    </li>
+                    <!--  <li class="nav-item ">
+            <a class="nav-link" href="./tables.html">
+              <i class="material-icons">content_paste</i>
+              <p>Table List</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./typography.html">
+              <i class="material-icons">library_books</i>
+              <p>Typography</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./icons.html">
+              <i class="material-icons">bubble_chart</i>
+              <p>Icons</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./map.html">
+              <i class="material-icons">location_ons</i>
+              <p>Maps</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li>-->
+                    <!-- <li class="nav-item active-pro ">
+                <a class="nav-link" href="./upgrade.html">
+                    <i class="material-icons">unarchive</i>
+                    <p>Upgrade to PRO</p>
+                </a>
+            </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="javascript:void(0)">Registration Portal</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header card-header-info">
+                                    <h4 class="card-title">Register</h4>
+                                    <p class="card-category">After competing the payment process using one of the given options, take the screenshot of the transaction ID for your reference.<br>
+
+                                        You have to enter the same transaction ID here for completing your registration process.<br>
+
+                                        Also, after the registration process, you will receive a confirmation mail within few days. The details in the confirmation mail and the screenshot of your transaction must be same otherwise your registration will not be accepted!!</p>
+                                </div>
+                                <div class="card-body">
+                                    <form action="reg.php" id="sign_up" method="POST" enctype="multipart/form-data" onsubmit="return validateform()">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color:gray" class="bmd-label-floating">Name</label>
+                                                    <input type="text" class="form-control" name="name" required="required">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color:gray" class="bmd-label-floating">Email address</label>
+                                                    <input type="email" class="form-control" name="email" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color:gray" class="bmd-label-floating">Contact(Whatsapp)</label>
+                                                    <input type="text" class="form-control" name="contact" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color:gray" class="bmd-label-floating">S.A.P. ID</label>
+                                                    <input type="text" class="form-control" name="sap" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+
+                                                    <select type="text" class="form-control" style="color:gray" name="year" id="mode" required="required">
+                                                        <option value="" disabled="disabled" style="color:gray" selected="selected">Year(Academic year)</option>
+                                                        <option style="color:gray" value="1">1</option>
+                                                        <option style="color:gray" value="2">2</option>
+                                                        <option style="color:gray" value="3">3</option>
+                                                        <option style="color:gray" value="4">4</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+
+                                                    <select type="text" class="form-control" style="color:gray" name="member" id="member" required="required">
+                                                        <option value="" disabled="disabled" style="color:gray" selected="selected">Membership Type</option>
+                                                        <option style="color:gray" value="300">1 year - Rs. 300</option>
+                                                        <option style="color:gray" value="500">2 year - Rs. 500</option>
+                                                        <option style="color:gray" value="700">3 year - Rs. 700</option>
+                                                        <option style="color:gray" value="800">4 year - Rs. 800</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+
+
+                                                    <label style="color:gray" class="bmd-label-floating">Course</label>
+                                                    <input type="text" class="form-control" name="course" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+
+                                                    <select type="text" class="form-control" style="color:gray" name="mode" id="mode" required="required">
+                                                        <option value="" disabled="disabled" style="color:gray" selected="selected">Mode of payment</option>
+                                                        <option style="color:gray" value="paytm">Paytm</option>
+                                                        <option style="color:gray" value="upi">UPI</option>
+                                                        <option style="color:gray" value="phone_pay">Phone pay</option>
+                                                        <option style="color:gray" value="google_pay">Google pay</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="color:gray" class="bmd-label-floating">Transaction ID</label>
+                                                    <input type="text" class="form-control" name="transaction" required="required">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+
+                                                    <select type="text" class="form-control" style="color:gray" name="sex" id="sex" required="required">
+                                                        <option value="" disabled="disabled" style="color:gray" selected="selected">Gender</option>
+                                                        <option style="color:gray" value="Male">Male</option>
+                                                        <option style="color:gray" value="Female">Female</option>
+                                                        <option style="color:gray" value="Others">Others</option>
+                                                        <option style="color:gray" value="Prefer not to say">Prefer not to say</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label style="color:gray" class="bmd-label-floating">Date Of Birth:</label>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div class="form-group">
+
+                                                    <input type="date" style="color:gray" class="form-control" placeholder="dob" name="dob" required="required">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                  
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="custom-file">
+                                                    <label style="color:gray"  for="ss">Screenshot of Transaction: </label><br>
+
+                                                    <input type="file" style="color:gray"  id="ss" name ="ss" lang="es" required="required">
+                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <button type="submit" class="btn btn-info pull-right">Register</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+
+                            <div class="card card-profile">
+                                <div class="card-header card-header-info">
+                                    <h4 class="card-title">QR Codes</h4>
+                                    <p class="card-category">SCAN</p>
+                                </div>
+                                <br>
+                                <div class="cards">
+
+                                    <a href="#pablo">
+                                        <img class="rounded " src="assets1/img/Phone.jpeg" style="width: 300px; height: 300px;" />
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-category">Phone Pay</h6>
+
+                                </div>
+                                <div class="cards">
+
+                                    <a href="#pablo">
+                                        <img class="rounded " src="assets1/img/upi.jpeg" style="width: 300px; height: 300px;" />
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-category">UPI</h6>
+
+                                </div>
+                                <div class="cards">
+
+                                    <a href="#pablo">
+                                        <img class="rounded " src="assets1/img/paytm.jpeg" style="width: 300px; height: 300px;" />
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-category">PayTm</h6>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+
+                    <div class="copyright float-right" id="date">
+                        Made by the heads of
+                        <a target="_blank">UPES-CSI</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src="assets1/js/core/jquery.min.js"></script>
+    <script src="assets1/js/core/popper.min.js"></script>
+    <script src="assets1/js/core/bootstrap-material-design.min.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="assets1/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chartist JS -->
+    <script src="assets1/js/plugins/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="assets1/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="assets1/js/material-dashboard.js?v=2.1.0"></script>
+    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <script src="assets1/demo/demo.js"></script>
+    <script>
+        function validateform() {
+            var sap = document.forms["sign_up"]["sap"].value;;
+            var contact = document.forms["sign_up"]["contact"].value;
+            if (contact.length != 10) {
+                alert("Enter a Valid Contact no. !!!!");
+                return false;
+            }
+
+            if (Number.isInteger(sap) == true || sap.length != 9) {
+                alert("Enter a Valid sap Id !!!! ");
+                return false;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

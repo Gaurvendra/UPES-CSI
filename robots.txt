@@ -1,0 +1,8 @@
+User-agent: *
+
+Allow: /index.html
+Allow: /about.html
+Allow: /
+Disallow: /portal/*
+
+

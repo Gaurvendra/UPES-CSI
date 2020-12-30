@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="/fonts/Hind.ttf" rel='stylesheet'>
+  <style type="text/css">
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: white;
+  font-family: "Hind", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  background-attachment: fixed;
+}
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.heading {
+  font-family: "Hind";
+
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1ch;
+  line-height: 1;
+  padding-bottom: .5em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+
+.description {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  color: black;
+  cursor: pointer;
+  width: calc(33% - 2rem);
+  min-width: calc(33% - 2rem);
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+}
+
+.front {
+  background-size: cover;
+  padding: 2rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+.front:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  opacity: 0;
+  z-index: -1;
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even):hover .front {
+  transform: rotateY(-180deg);
+}
+
+.back {
+  background: #fff;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+.back .button {
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+}
+.back .button:before {
+  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+  background-color: rgba(26, 87, 230, 0.25);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+.card:nth-child(even) .back {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even) .back .button {
+  background: linear-gradient(135deg, #e61a80, #e61a3c);
+}
+.card:nth-child(even) .back .button:before {
+  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
+  background-color: rgba(230, 26, 60, 0.25);
+}
+.card:nth-child(even):hover .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  transform: translateZ(40px);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+.button:before {
+  transition: 300ms ease;
+  position: absolute;
+  display: block;
+  content: '';
+  transform: translateZ(-40px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 100px;
+  left: 10px;
+  top: 16px;
+}
+.button:hover {
+  transform: translateZ(55px);
+}
+.button:hover:before {
+  transform: translateZ(-55px);
+}
+.button:active {
+  transform: translateZ(20px);
+}
+.button:active:before {
+  transform: translateZ(-20px);
+  top: 12px;
+}
+
+
+
+  </style>
+</head>
+<body>
+<br><br>
+<div class="content">
+  <h1 class="heading">Magic Task</h1>
+  <br><br><br><br><a class="card" href="#!">
+    <div class="front" style="background-image: url(1.jpeg)">
+      <p>1</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Explain in twenty seconds,Who came first, chicken or the egg?</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(2.jpeg)">
+      <p>2</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Have a conversation with a pen for 15 seconds</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(3.jpeg)">
+      <p>3</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Enact a popular movie of your choice until someone guesses it</p>
+        <p></p>
+       
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(1.jpeg)">
+      <p>4</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Sing a nursery rhyme in a child’s voice.</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(2.jpeg)">
+      <p>5</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Talk without moving your lips (male-femal combination)</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(3.jpeg)">
+      <p>6</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Sing a sad song with a high pitch voice.</p>
+        <p></p>
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>7</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Recite 5 sentences that ends with “while i dance or with a cherry on top”</p>
+        <p></p>
+        
+      </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>8</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Sing the ABC backwards</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>9</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Make up a poem using the words orange and moose</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>10</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Speak a popular dialogue from a movie holding your nose with your hands.</p>
+        <p></p>
+              </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>11</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Sing a rap on yourself for 1 min non-stop.</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>12</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Cry loudly and act like you want candy from someone in the opposing team.</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>13</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>complete the dialogue and include your name anywhere in the sentence “Kabhi kabhi kuch jeetne ke liye kuch harna bhi padta hai,aur …….”</p>
+        <p></p>
+        
+      </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>14</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Say the dialogues in English “Jab yeh dhai kilo ka haath kisi pe padta hai toh aadmi uthta nahi, uth jaata hai”</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>15</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Say it 3 times “If you understand, say "understand".
+if you don't understand, say "don't understand".
+but if you understand and say "don't understand".
+how do I understand that you understand? understand!”
+</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>16</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Name 5 actors from the letter ‘I’ in 10 seconds</p>
+        <p></p>
+        
+      </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>17</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Enact this in a happy tone “Meri biwi teri biwi, teri biwi teri biwi, meri bahen teri hone wali biwi, teri biwi meri behen, yeh har baar har aurat teri biwi aur meri behen bann jaati hai aur teri kismat kharab hai?”</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>18</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>आगे दौड़ पीछे चौड</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>19</p>
+    </div>
+    <div class="back">
+      <div>
+        <p> तेल देखो तेल की धार देखो</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>20</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Guess the Gibberish: “ACE HEIGHT FORCE OAR RISE”</p>
+        <p></p>
+        
+      </div>
+    </div></a>
+
+</div>
+
+</body>
+</html>
